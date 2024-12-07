@@ -1,0 +1,3 @@
+Hello,
+To make Elaboratory Data Analysis I have downloaded liabriries as pandas,matplotlib,seaborn,windrose and scipy.
+So you can use this as reuirement to repeat my work.
