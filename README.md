@@ -79,7 +79,7 @@ The dataset contains solar radiation measurements with the following key variabl
 Run the comprehensive EDA notebook:
 
 ```bash
-jupyter notebook notebooks/week0_comprehensive_eda.ipynb
+jupyter notebook notebooks/comprehensive_eda.ipynb
 ```
 
 The notebook includes:
@@ -122,8 +122,8 @@ MoonLight-Energy-Solutions/
 ├── data/                    # Data directory
 │   └── raw/                # Raw CSV data files
 ├── notebooks/              # Jupyter notebooks
-│   ├── week0_comprehensive_eda.ipynb  # Main analysis notebook
-│   └── 00_eda_and_quality_checks.ipynb
+│   ├── comprehensive_eda.ipynb  # Main analysis notebook
+│
 ├── scripts/                # Reusable Python modules
 │   ├── data_load.py        # Data loading utilities
 │   ├── eda.py             # Exploratory data analysis functions
