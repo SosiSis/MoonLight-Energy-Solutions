@@ -51,8 +51,8 @@ The dataset contains solar radiation measurements with the following key variabl
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd KAIM-week-0
+   git clone https://github.com/SosiSis/MoonLight-Energy-Solutions
+   cd MoonLight-Energy-Solutions
    ```
 
 2. **Create virtual environment:**
@@ -110,7 +110,7 @@ The dashboard provides:
 ## 🏗️ Project Structure
 
 ```
-KAIM-week-0/
+MoonLight-Energy-Solutions/
 ├── .streamlit/              # Streamlit configuration
 │   └── config.toml
 ├── .github/                 # GitHub Actions workflows
