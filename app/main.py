@@ -7,11 +7,36 @@ import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-from app.utils import (
-    load_all_countries, daily_agg_for_country, plot_timeseries_streamlit,
-    cleaning_impact_report, compute_correlations, create_wind_analysis,
-    generate_summary_stats, create_zscore_analysis, create_bubble_charts
-)
+
+# Handle imports for both local development and Streamlit Cloud deployment
+import sys
+import os
+
+# Add the project root to Python path for imports
+if os.path.exists(os.path.join(os.path.dirname(__file__), '..', 'app')):
+    # Running from project root
+    sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+    from app.utils import (
+        load_all_countries, daily_agg_for_country, plot_timeseries_streamlit,
+        cleaning_impact_report, compute_correlations, create_wind_analysis,
+        generate_summary_stats, create_zscore_analysis, create_bubble_charts
+    )
+else:
+    # Running from app directory or Streamlit Cloud
+    try:
+        from utils import (
+            load_all_countries, daily_agg_for_country, plot_timeseries_streamlit,
+            cleaning_impact_report, compute_correlations, create_wind_analysis,
+            generate_summary_stats, create_zscore_analysis, create_bubble_charts
+        )
+    except ImportError:
+        # Fallback: add current directory to path
+        sys.path.append(os.path.dirname(__file__))
+        from utils import (
+            load_all_countries, daily_agg_for_country, plot_timeseries_streamlit,
+            cleaning_impact_report, compute_correlations, create_wind_analysis,
+            generate_summary_stats, create_zscore_analysis, create_bubble_charts
+        )
 
 # Set page configuration
 st.set_page_config(
