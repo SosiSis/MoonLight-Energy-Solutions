@@ -1,3 +1,10 @@
-Hello,
-To make Elaboratory Data Analysis I have downloaded liabriries as pandas,matplotlib,seaborn,windrose and scipy.
-So you can use this as reuirement to repeat my work.
+pandas>=1.5
+numpy>=1.24
+matplotlib>=3.6
+seaborn>=0.12
+streamlit>=1.24
+pytest
+pyyaml
+scipy
+windrose
+plotly
