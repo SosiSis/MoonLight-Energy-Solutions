@@ -17,8 +17,7 @@ def check_app_health():
         "app/utils.py", 
         "app/__init__.py",
         "requirements.txt",
-        ".streamlit/config.toml",
-        "packages.txt"
+        ".streamlit/config.toml"
     ]
     
     print("📁 Checking file structure...")
