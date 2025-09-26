@@ -1,0 +1,67 @@
+[global]
+
+# If false, makes your Streamlit script run as a module.
+developmentMode = false
+
+# Note: dataFrameSerialization option has been removed in newer Streamlit versions
+
+[logger]
+
+# Level of logging: 'error', 'warning', 'info', 'debug'.
+level = "info"
+
+[client]
+
+# Note: caching option has been removed in newer Streamlit versions
+# Use st.cache_data or st.cache_resource instead
+
+# If false, will attempt to open a new tab or window every time Streamlit is
+# called. If true, will only open a new tab the first time Streamlit is called.
+showSidebarNavigation = true
+
+# Controls whether uncaught app exceptions are displayed in the browser. By
+# default, this is set to True and Streamlit displays app exceptions and
+# associated tracebacks in the browser.
+showErrorDetails = true
+
+[server]
+
+# List of folders that should not be watched for changes. This impacts both
+# "Run on Save" and @st.cache.
+folderWatchBlacklist = ['']
+
+# Change the type of file watcher used by Streamlit, or turn it off completely.
+fileWatcherType = "auto"
+
+# If false, will attempt to open a new browser tab on the local development
+# machine when `streamlit run` is called.
+headless = true
+
+# Automatically rerun script when the file is modified on disk.
+runOnSave = false
+
+# The port where the server will listen for client and browser connections.
+port = 8501
+
+# The base path for the URL where Streamlit should be reachable from.
+baseUrlPath = ""
+
+# Enables support for Cross-Origin Request Sharing (CORS) protection, for added security.
+enableCORS = true
+
+# Enables support for Cross-Site Request Forgery (XSRF) protection, for added security.
+enableXsrfProtection = true
+
+# Max size, in megabytes, for files uploaded with the file_uploader.
+maxUploadSize = 200
+
+# Max size, in megabytes, of messages that can be sent via the WebSocket connection.
+maxMessageSize = 200
+
+# Enables support for websocket compression.
+enableWebsocketCompression = false
+
+[browser]
+
+# Whether to send usage statistics to Streamlit.
+gatherUsageStats = false
