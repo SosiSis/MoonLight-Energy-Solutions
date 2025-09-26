@@ -15,8 +15,10 @@ def check_app_health():
     required_files = [
         "app/main.py",
         "app/utils.py", 
+        "app/__init__.py",
         "requirements.txt",
-        ".streamlit/config.toml"
+        ".streamlit/config.toml",
+        "packages.txt"
     ]
     
     print("📁 Checking file structure...")
@@ -64,9 +66,29 @@ def check_app_health():
         else:
             print(f"   ⚠️  {file} - Missing (may cause runtime issues)")
     
+    print("\n📦 Checking Python imports...")
+    try:
+        # Test imports from app directory
+        import os
+        import sys
+        current_dir = os.getcwd()
+        os.chdir('app')
+        sys.path.append('.')
+        
+        import utils
+        print("   ✅ utils module imports successfully")
+        
+        os.chdir(current_dir)
+        sys.path.remove('.')
+        
+    except Exception as e:
+        print(f"   ❌ Import test failed: {e}")
+        return False
+    
     print("\n🎯 Health Check Summary:")
     print("   ✅ Core application structure is healthy")
     print("   ✅ Configuration issues resolved")
+    print("   ✅ Import issues resolved")
     print("   ✅ Ready for Streamlit Cloud deployment")
     
     print("\n🚀 Deployment Instructions:")
